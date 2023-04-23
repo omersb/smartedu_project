@@ -9,11 +9,11 @@ def course_list(request, category_slug=None, tag_slug=None):
     tags = Tag.objects.all()
     current_user = request.user
 
-    if category_slug != None:
+    if category_slug is not None:
         category_page = get_object_or_404(Category, slug=category_slug)
         courses = Course.objects.filter(available=True, category=category_page)
 
-    elif tag_slug != None:
+    elif tag_slug is not None:
         tag_page = get_object_or_404(Tag, slug=tag_slug)
         courses = Course.objects.filter(available=True, tags=tag_page)
 
@@ -41,7 +41,7 @@ def course_detail(request, category_slug, course_id):
     current_user = request.user
     course = Course.objects.get(category__slug=category_slug, id=course_id)
     courses = Course.objects.all().order_by('-date')
-    categories = categories = Category.objects.all()
+    categories = Category.objects.all()
     tags = Tag.objects.all()
     if current_user.is_authenticated:
         enrolled_courses = current_user.courses_joined.all()
@@ -77,12 +77,12 @@ def search(request):
 # def category_list(request, category_slug):
 #     courses = Course.objects.all().filter(category__slug=category_slug)
 #     categories = Category.objects.all()
-#     tags = Tag.objects.all()
+#     tags= Tag.objects.all()
 #
 #     context = {
 #         'courses': courses,
 #         'categories': categories,
-#         'tags': tags
+#         'tags':tags
 #     }
 #
 #     return render(request, 'courses.html', context)
@@ -91,12 +91,12 @@ def search(request):
 # def tag_list(request, tag_slug):
 #     courses = Course.objects.all().filter(tags__slug=tag_slug)
 #     categories = Category.objects.all()
-#     tags = Tag.objects.all()
+#     tags= Tag.objects.all()
 #
 #     context = {
 #         'courses': courses,
 #         'categories': categories,
-#         'tags': tags
+#         'tags':tags
 #     }
 #
 #     return render(request, 'courses.html', context)
