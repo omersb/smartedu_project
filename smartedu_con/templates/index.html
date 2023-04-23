@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-
+	
 	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -22,7 +22,7 @@
 										<p class="lead">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
 									</div>
 								</div>
-							</div><!-- end row -->
+							</div><!-- end row -->            
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -38,7 +38,7 @@
 										<p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
 									</div>
 								</div>
-							</div><!-- end row -->
+							</div><!-- end row -->            
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -51,12 +51,12 @@
 								<div class="col-md-12 col-sm-12 text-center">
 									<div class="big-tagline">
 										<h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company</h2>
-										<p class="lead" data-animation="animated fadeInLeft">1 IP included with each server
+										<p class="lead" data-animation="animated fadeInLeft">1 IP included with each server 
 											Your Choice of any OS (CentOS, Windows, Debian, Fedora)
 											FREE Reboots</p>
 									</div>
 								</div>
-							</div><!-- end row -->
+							</div><!-- end row -->            
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -74,7 +74,7 @@
 			</a>
 		</div>
 	</div>
-
+	
     <div id="overviews" class="section wb">
         <div class="container">
             <div class="section-title row text-center">
@@ -85,7 +85,7 @@
             </div><!-- end title -->
 
 			{% for course in courses %}
-
+        
             <div class="row align-items-center">
 
 				{% if not forloop.first %}
@@ -105,7 +105,7 @@
                         <a href="{% url 'course_detail' course.category.slug course.id %}" class="hover-btn-new orange"><span>Learn More</span></a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
-
+				
 				{% if forloop.first %}
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="post-media wow fadeIn">

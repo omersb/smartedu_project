@@ -312,7 +312,7 @@
 }
 
 .timeline-nav-button--prev:before {
-	background-image: url(arrow-left.svg)
+	background-image: url(../images/arrow-left.svg)
 }
 
 .timeline-nav-button--next {
@@ -320,7 +320,7 @@
 }
 
 .timeline-nav-button--next:before {
-	background-image: url(arrow-right.svg)
+	background-image: url(../images/arrow-right.svg)
 }
 
 .timeline--mobile {
