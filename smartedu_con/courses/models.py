@@ -1,5 +1,7 @@
 from django.db import models
 
+from teachers.models import Teacher
+
 
 class Category(models.Model):
     name = models.CharField(max_length=50, null=True)
@@ -20,6 +22,7 @@ class Tag(models.Model):
 class Course(models.Model):
     name = models.CharField(max_length=200, unique=True)
     category = models.ForeignKey(Category, null=True, on_delete=models.DO_NOTHING)
+    teacher = models.ForeignKey(Teacher, null=True, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag, blank=True)
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(upload_to='courses/%Y/%m/%d', default="courses/default_course_image.jpg")
